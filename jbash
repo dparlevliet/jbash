@@ -1,0 +1,16 @@
+#! /usr/bin/python
+import sys
+import json
+
+def main():
+  jdata = ""
+  for line in sys.stdin:
+    jdata += line
+
+  jdata = json.loads(jdata)
+  print jdata[sys.argv[1]]
+
+
+if __name__ == "__main__":
+  main()
+
